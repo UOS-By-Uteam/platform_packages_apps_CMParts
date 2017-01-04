@@ -541,4 +541,8 @@
     <string name="expanded_desktop_style_hide_navigation">Hide navigation bar</string>
     <string name="expanded_desktop_style_hide_both">Hide both</string>
     <string name="expanded_desktop_nothing_to_show_text">Turn the switch off to customize your expanded desktop on a per-app basis</string>
+
+    <!-- Statusbar: Connection Speed -->
+    <string name="connection_speed_title">Connection speed</string>
+    <string name="connection_speed_summary">Enable to display connection speed on your statusbar</string>
 </resources>

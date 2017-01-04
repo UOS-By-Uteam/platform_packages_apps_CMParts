@@ -99,4 +99,10 @@
         android:summary="@string/status_bar_double_tap_to_sleep_summary"
         android:defaultValue="true" />
 
+    <!-- Connection speed -->
+    <cyanogenmod.preference.SystemSettingSwitchPreference
+        android:key="connection_speed_state"
+        android:title="@string/connection_speed_title"
+        android:summary="@string/connection_speed_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
