@@ -16,7 +16,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="cmparts_title">CyanogenMod Settings</string>
+    <string name="cmparts_title">UOS Settings</string>
 
     <!-- Generic stuff used everywhere -->
     <string name="loading">Loading\u2026</string>
@@ -415,8 +415,8 @@
     <string name="alarm_volume_title">Alarm</string>
     <string name="doze_title">Ambient display</string>
 
-    <!-- Status bar -->
-    <string name="status_bar_title">Status bar</string>
+    <!-- Notification & Status bar -->
+    <string name="status_bar_title">Notification &amp; status bar</string>
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
     <string name="status_bar_notif_count_title">Show notification count</string>
@@ -428,6 +428,10 @@
     <string name="status_bar_quick_qs_pulldown_off">Off</string>
     <string name="status_bar_quick_qs_pulldown_left">Left</string>
     <string name="status_bar_quick_qs_pulldown_right">Right</string>
+
+    <!-- Notification -->
+    <string name="notification_category_label">Notification</string>
+    <string name="app_notification_title">App Notification</string>
 
     <!-- Status bar - Clock -->
     <string name="status_bar_clock_style_title">Clock style</string>
@@ -543,6 +547,10 @@
     <string name="expanded_desktop_nothing_to_show_text">Turn the switch off to customize your expanded desktop on a per-app basis</string>
 
     <!-- Statusbar: Connection Speed -->
-    <string name="connection_speed_title">Connection speed</string>
+    <string name="connection_speed_title">Show connection speed</string>
     <string name="connection_speed_summary">Enable to display connection speed on your statusbar</string>
+
+    <!-- Statusbar: Notification Icons -->
+    <string name="notification_icons_title">Show notification icons</string>
+    <string name="notification_icons_summary">Enable to show notification icons on your statusbar</string>
 </resources>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
      Copyright (C) 2014-2016 The CyanogenMod Project
+     Copyright (C) 2017 The UOS Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,90 +20,113 @@
     android:key="status_bar_settings"
     android:title="@string/status_bar_title">
 
-    <PreferenceScreen
-        android:key="status_bar_icons"
-        android:title="@string/status_bar_icons_title"
-        android:summary="@string/status_bar_icons_summary">
-        <intent
-            android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.TunerActivity">
-            <extra android:name="tuner" android:value="status_bar" />
-        </intent>
-    </PreferenceScreen>
+    <PreferenceCategory
+            android:key="notification"
+            android:title="@string/notification_category_label">
 
-    <cyanogenmod.preference.CMSystemSettingListPreference
-        android:key="status_bar_clock"
-        android:title="@string/status_bar_clock_style_title"
-        android:summary="%s"
-        android:dialogTitle="@string/status_bar_clock_style_title"
-        android:entries="@array/status_bar_clock_style_entries"
-        android:entryValues="@array/status_bar_clock_style_values"
-        android:defaultValue="1" />
+        <PreferenceScreen
+            android:key="app_notifcation"
+            android:title="@string/app_notification_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.android.settings"
+                android:targetClass="com.android.settings.notification.AppNotificationSettings">
+            </intent>
+        </PreferenceScreen>
 
-    <cyanogenmod.preference.CMSystemSettingListPreference
-        android:key="status_bar_am_pm"
-        android:title="@string/status_bar_am_pm_title"
-        android:summary="%s"
-        android:dialogTitle="@string/status_bar_am_pm_title"
-        android:entries="@array/status_bar_am_pm_entries"
-        android:entryValues="@array/status_bar_am_pm_values"
-        android:defaultValue="2" />
+    </PreferenceCategory>
 
-    <cyanogenmod.preference.CMSystemSettingListPreference
-        android:key="status_bar_battery_style"
-        android:title="@string/status_bar_battery_style_title"
-        android:summary="%s"
-        android:dialogTitle="@string/status_bar_battery_style_title"
-        android:entries="@array/status_bar_battery_style_entries"
-        android:entryValues="@array/status_bar_battery_style_values"
-        android:defaultValue="2" />
+        <PreferenceScreen
+            android:key="status_bar_icons"
+            android:title="@string/status_bar_icons_title"
+            android:summary="@string/status_bar_icons_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.systemui"
+                android:targetClass="com.android.systemui.tuner.TunerActivity">
+                <extra android:name="tuner" android:value="status_bar" />
+            </intent>
+        </PreferenceScreen>
 
-    <cyanogenmod.preference.CMSystemSettingListPreference
-        android:key="status_bar_show_battery_percent"
-        android:title="@string/status_bar_battery_percentage_title"
-        android:summary="%s"
-        android:dialogTitle="@string/status_bar_battery_percentage_title"
-        android:entries="@array/status_bar_battery_percentage_entries"
-        android:entryValues="@array/status_bar_battery_percentage_values"
-        android:defaultValue="0" />
+        <cyanogenmod.preference.CMSystemSettingListPreference
+            android:key="status_bar_clock"
+            android:title="@string/status_bar_clock_style_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_clock_style_title"
+            android:entries="@array/status_bar_clock_style_entries"
+            android:entryValues="@array/status_bar_clock_style_values"
+            android:defaultValue="1" />
 
-    <cyanogenmod.preference.CMSystemSettingListPreference
-        android:key="qs_quick_pulldown"
-        android:title="@string/status_bar_quick_qs_pulldown_title"
-        android:entries="@array/status_bar_quick_qs_pulldown_entries"
-        android:entryValues="@array/status_bar_quick_qs_pulldown_values"
-        android:defaultValue="1" />
+        <cyanogenmod.preference.CMSystemSettingListPreference
+            android:key="status_bar_am_pm"
+            android:title="@string/status_bar_am_pm_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_am_pm_title"
+            android:entries="@array/status_bar_am_pm_entries"
+            android:entryValues="@array/status_bar_am_pm_values"
+            android:defaultValue="2" />
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
-        android:key="status_bar_show_weather"
-        android:title="@string/status_bar_show_weather_title"
-        android:summary="@string/status_bar_show_weather_summary"
-        android:defaultValue="true" />
+        <cyanogenmod.preference.CMSystemSettingListPreference
+            android:key="status_bar_battery_style"
+            android:title="@string/status_bar_battery_style_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_battery_style_title"
+            android:entries="@array/status_bar_battery_style_entries"
+            android:entryValues="@array/status_bar_battery_style_values"
+            android:defaultValue="2" />
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
-        android:key="status_bar_brightness_control"
-        android:title="@string/status_bar_toggle_brightness"
-        android:summary="@string/status_bar_toggle_brightness_summary"
-        android:defaultValue="false" />
+        <cyanogenmod.preference.CMSystemSettingListPreference
+            android:key="status_bar_show_battery_percent"
+            android:title="@string/status_bar_battery_percentage_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_battery_percentage_title"
+            android:entries="@array/status_bar_battery_percentage_entries"
+            android:entryValues="@array/status_bar_battery_percentage_values"
+            android:defaultValue="0" />
 
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
-        android:key="status_bar_notif_count"
-        android:title="@string/status_bar_notif_count_title"
-        android:summary="@string/status_bar_notif_count_summary"
-        android:defaultValue="true" />
+        <cyanogenmod.preference.CMSystemSettingListPreference
+            android:key="qs_quick_pulldown"
+            android:title="@string/status_bar_quick_qs_pulldown_title"
+            android:entries="@array/status_bar_quick_qs_pulldown_entries"
+            android:entryValues="@array/status_bar_quick_qs_pulldown_values"
+            android:defaultValue="1" />
 
-    <!-- Double tap to sleep -->
-    <cyanogenmod.preference.CMSystemSettingSwitchPreference
-        android:key="double_tap_sleep_gesture"
-        android:title="@string/status_bar_double_tap_to_sleep_title"
-        android:summary="@string/status_bar_double_tap_to_sleep_summary"
-        android:defaultValue="true" />
+        <cyanogenmod.preference.CMSystemSettingSwitchPreference
+            android:key="status_bar_show_weather"
+            android:title="@string/status_bar_show_weather_title"
+            android:summary="@string/status_bar_show_weather_summary"
+            android:defaultValue="true" />
 
-    <!-- Connection speed -->
-    <cyanogenmod.preference.SystemSettingSwitchPreference
-        android:key="connection_speed_state"
-        android:title="@string/connection_speed_title"
-        android:summary="@string/connection_speed_summary"
-        android:defaultValue="false" />
+        <cyanogenmod.preference.CMSystemSettingSwitchPreference
+            android:key="status_bar_brightness_control"
+            android:title="@string/status_bar_toggle_brightness"
+            android:summary="@string/status_bar_toggle_brightness_summary"
+            android:defaultValue="false" />
+
+        <cyanogenmod.preference.CMSystemSettingSwitchPreference
+            android:key="status_bar_notif_count"
+            android:title="@string/status_bar_notif_count_title"
+            android:summary="@string/status_bar_notif_count_summary"
+            android:defaultValue="true" />
+
+        <!-- Double tap to sleep -->
+        <cyanogenmod.preference.CMSystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="true" />
+
+        <!-- Connection speed -->
+        <cyanogenmod.preference.SystemSettingSwitchPreference
+            android:key="connection_speed_state"
+            android:title="@string/connection_speed_title"
+            android:summary="@string/connection_speed_summary"
+            android:defaultValue="false" />
+
+        <!-- Notification icons -->
+        <cyanogenmod.preference.SystemSettingSwitchPreference
+            android:key="notification_icons_hide"
+            android:title="@string/notification_icons_title"
+            android:summary="@string/notification_icons_summary"
+            android:defaultValue="false" />
 </PreferenceScreen>
