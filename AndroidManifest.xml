@@ -89,13 +89,9 @@
             android:label="@string/privacy_settings_title"
             android:targetActivity="PartsActivity">
             <intent-filter android:priority="1">
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
                 <action android:name="org.cyanogenmod.cmparts.PRIVACY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.personal" />
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_privacy" />
@@ -113,13 +109,9 @@
             android:label="@string/button_pref_title"
             android:targetActivity="PartsActivity">
             <intent-filter android:priority="1">
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
                 <action android:name="org.cyanogenmod.cmparts.BUTTON_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.device" />
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_buttons" />
@@ -131,19 +123,15 @@
                 android:value="button_settings" />
         </activity-alias>
 
-        <!-- Profiles settings (dashboard) -->
+        <!-- Profiles settings -->
         <activity-alias
             android:name=".profiles.ProfilesSettings"
             android:label="@string/profiles_settings_title"
             android:targetActivity="PartsActivity">
             <intent-filter android:priority="1">
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
                 <action android:name="org.cyanogenmod.cmparts.PROFILES_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.personal" />
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_profiles" />
@@ -155,19 +143,15 @@
                 android:value="profiles_settings" />
         </activity-alias>
 
-        <!-- Status bar settings (dashboard) -->
+        <!-- Status bar settings-->
         <activity-alias
             android:name=".statusbar.StatusBarSettings"
             android:label="@string/status_bar_title"
             android:targetActivity="PartsActivity">
             <intent-filter android:priority="1">
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
                 <action android:name="org.cyanogenmod.cmparts.STATUS_BAR_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.system" />
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/ic_settings_statusbar" />
